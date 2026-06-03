@@ -237,18 +237,18 @@ export const unitPriceList: UnitPriceItem[] = [
 ];
 
 export const contactInfo: ContactInfo = {
-  phone: "08119333479",
-  formattedPhone: "628119333479",
-  whatsappMessage: "Halo Bintang Laundry, saya ingin memesan layanan laundry. Apakah bisa antar jemput?",
-  instagram: "@bintanglaundry.btr",
-  instagramUrl: "https://www.instagram.com/bintanglaundry.btr?igsh=MTZmcmNvcWNoZmJxZA==",
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "081234567890",
+  formattedPhone: process.env.NEXT_PUBLIC_CONTACT_PHONE_WA || "6281234567890",
+  whatsappMessage: process.env.NEXT_PUBLIC_WA_MESSAGE || "Halo Bintang Laundry, saya ingin memesan layanan laundry. Apakah bisa antar jemput?",
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME || "@bintanglaundry.btr",
+  instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/bintanglaundry.btr?igsh=MTZmcmNvcWNoZmJxZA==",
   operationalHours: "08.00 - 17.00 WIB (Fleksibel)",
   address: {
-    line1: "Cluster Corundum Blok C2 No. 5",
-    line2: "Cimuning, Mustika Jaya",
-    city: "Bekasi",
-    province: "Jawa Barat",
+    line1: process.env.NEXT_PUBLIC_ADDRESS_LINE1 || "Cluster Corundum Blok C2 No. 5",
+    line2: process.env.NEXT_PUBLIC_ADDRESS_LINE2 || "Cimuning, Mustika Jaya",
+    city: process.env.NEXT_PUBLIC_ADDRESS_CITY || "Bekasi",
+    province: process.env.NEXT_PUBLIC_ADDRESS_PROVINCE || "Jawa Barat",
   },
-  googleMapsUrl: "https://maps.app.goo.gl/6vK6ZBzACq612nZFA",
-  googleMapsEmbedQuery: "Cluster Corundum Blok C2 No. 5, Cimuning, Mustika Jaya, Bekasi, Jawa Barat",
+  googleMapsUrl: process.env.NEXT_PUBLIC_MAPS_URL || "https://maps.app.goo.gl/6vK6ZBzACq612nZFA",
+  googleMapsEmbedQuery: process.env.NEXT_PUBLIC_MAPS_QUERY || "Cluster Corundum Blok C2 No. 5, Cimuning, Mustika Jaya, Bekasi, Jawa Barat",
 };
