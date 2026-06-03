@@ -1,173 +1,163 @@
-# 🌟 Bintang Laundry Landing Page
+# 🧺 Bintang Laundry Landing Page Template
 
-Website landing page single-page yang minimalis, modern, dan premium untuk usaha **Bintang Laundry**. Website ini dibangun dengan fokus pada performa maksimal, whitespace yang lega, Call-to-Action (CTA) terpusat, dan rancangan kode yang modular agar mudah dikembangkan di masa mendatang.
+[![Next.js](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.x-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-Deploy-orange?style=for-the-badge&logo=cloudflare)](https://pages.cloudflare.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
+Template website *single-page landing page* minimalis, modern, dan premium untuk usaha laundry. Proyek ini dibangun menggunakan **Next.js Pages Router**, **React 19**, **TypeScript**, dan **Tailwind CSS v4** dengan arsitektur berbasis data (*data-driven*) agar mudah dikustomisasi oleh pengembang lain.
 
-## 🛠️ Tech Stack & Fitur
-
-- **Next.js (Pages Router) & React 19**
-- **TypeScript** (Strongly Typed & Scalable)
-- **Tailwind CSS v4** (Utility-first CSS modern)
-- **Plus Jakarta Sans** (Google Fonts via Next.js Font Optimization)
-- **Smooth Scroll Navigation** & Hamburger Menu untuk tampilan Mobile
-- **Static HTML Export** (Mulus & gratis 100% saat dideploy ke Cloudflare Pages)
-- **SEO Ready** (Title, Meta Description, & OpenGraph terpasang)
+Proyek ini telah dikonfigurasi menggunakan fitur **Static HTML Export** (`output: 'export'`) sehingga siap dideploy secara instan dan gratis ke berbagai platform CDN modern seperti Cloudflare Pages, Vercel, Netlify, atau GitHub Pages.
 
 ---
 
-## 📂 Struktur Folder Proyek
+## ✨ Fitur Utama
 
-```
-/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.tsx             # Navigasi atas yang responsif & backdrop-blur
-│   │   ├── Hero.tsx               # Section 1 - Banner utama dengan tombol CTA WhatsApp
-│   │   ├── PriceList.tsx          # Section 2 - Daftar harga kiloan (Cuci & Setrika)
-│   │   ├── UnitPriceSection.tsx   # Section 2.5 - Daftar harga satuan (Bed Cover, Selimut, dll)
-│   │   ├── PackageSection.tsx     # Section 3 - Paket langganan (dengan mode placeholder dinamis)
-│   │   ├── LocationSection.tsx    # Section 4 - Alamat, peta Google Maps interaktif, & tombol navigasi
-│   │   └── Footer.tsx             # Section 5 - Info medsos, copyright, & WA button
-│   ├── data/
-│   │   └── laundryData.ts         # Data terpusat (Harga, Paket, Alamat, Kontak WA)
-│   ├── pages/
-│   │   ├── _app.tsx               # Entrypoint & inisialisasi font global
-│   │   ├── _document.tsx          # Pengaturan dokumen HTML (lang="id")
-│   │   └── index.tsx              # Halaman utama landing page
-│   └── styles/
-│       └── globals.css            # Pengaturan global CSS & Tailwind v4 theme
-├── next.config.ts                 # Pengaturan static export (`output: 'export'`)
-├── tailwind.config.ts             # File konfigurasi opsional Tailwind
-└── package.json                   # Dependensi proyek
-```
+- 🎨 **Desain Minimalis Premium**: Layout bersih dengan white-space lega, tipografi modern (Plus Jakarta Sans), dan transisi hover mikro yang interaktif.
+- 📱 **Desain Mobile-First & Responsif**: UI dioptimalkan untuk performa maksimal di perangkat mobile, tablet, hingga desktop.
+- ⚙️ **Arsitektur Berbasis Data (Data-Driven)**: Konten penting seperti daftar harga kiloan, harga satuan, paket bulanan, kontak WhatsApp, link Instagram, alamat, dan Google Maps terpusat pada satu file data (`laundryData.ts`).
+- ⚡ **Kalkulasi Hemat Otomatis**: Menghitung secara dinamis selisih harga normal vs harga paket untuk menampilkan tag diskon (misal: "Hemat Rp 15.000") pada kartu paket.
+- 🗺️ **Integrasi Peta Interaktif**: Peta lokasi Google Maps yang fleksibel berdampingan dengan informasi alamat lengkap dan jam operasional dinamis.
+- 💬 **WhatsApp & Social Integrations**: Tombol Call-to-Action (CTA) WhatsApp yang otomatis memicu pesan pemesanan kustom beserta tombol pintasan Instagram dengan logo dan efek hover modern.
+- 🔍 **SEO & Speed Optimized**: Dilengkapi tag meta SEO (title, meta description, OpenGraph) untuk menunjang visibilitas pencarian Google.
 
 ---
 
-## 🚀 1. Cara Menjalankan Proyek di Localhost
+## 🛠️ Tech Stack
 
-Pastikan Anda telah menginstal **Node.js** di komputer Anda.
+- **Core Framework:** Next.js 15+ (Pages Router)
+- **Library Utama:** React 19, React DOM 19
+- **Bahasa Pemrograman:** TypeScript
+- **Styling Engine:** Tailwind CSS v4 (Direktif CSS Modern)
+- **Tipografi:** Google Font *Plus Jakarta Sans* via Next.js Font Optimization
+- **Build Mode:** Static HTML Export (`output: 'export'`)
 
-1. **Buka Terminal / Command Prompt / PowerShell** di dalam folder proyek ini:
-   `C:\Users\Bintang\Downloads\Project Bintang Laundry`
-2. **Instal seluruh dependensi**:
+---
+
+## 🚀 Instalasi & Menjalankan Lokal
+
+Bagi Anda yang ingin memasang, memodifikasi, atau berkontribusi pada repositori ini di komputer lokal, ikuti langkah di bawah ini:
+
+### Prasyarat
+Pastikan komputer Anda sudah terpasang [Node.js](https://nodejs.org/) (versi 18.x atau lebih baru).
+
+### Langkah Penginstalan
+1. **Clone repositori ini:**
+   ```bash
+   git clone https://github.com/USERNAME/bintang-laundry.git
+   cd bintang-laundry
+   ```
+
+2. **Instal dependensi proyek:**
    ```bash
    npm install
    ```
-3. **Jalankan server pengembangan lokal**:
+
+3. **Jalankan server pengembangan (development server):**
    ```bash
    npm run dev
    ```
-4. **Buka browser** dan akses alamat:
-   [http://localhost:3000](http://localhost:3000)
+   Buka browser Anda dan akses halaman [http://localhost:3000](http://localhost:3000).
+
+4. **Kompilasi produksi (Build & Static Export):**
+   ```bash
+   npm run build
+   ```
+   Hasil build statis akan diekspor ke folder `/out`.
 
 ---
 
-## 💻 2. Cara Push ke GitHub
+## ⚙️ Panduan Kustomisasi Data
 
-Jika Anda belum mengunggah proyek ini ke GitHub, ikuti langkah berikut:
+Proyek ini sengaja dirancang agar pemula sekalipun dapat mengubah harga layanan tanpa perlu menyentuh atau membongkar struktur komponen UI React.
 
-1. **Inisialisasi Git** (jika belum terinisialisasi):
-   ```bash
-   git init
-   ```
-2. **Tambahkan semua file ke staging**:
-   ```bash
-   git add .
-   ```
-3. **Lakukan commit pertama Anda**:
-   ```bash
-   git commit -m "feat: inisialisasi landing page Bintang Laundry premium"
-   ```
-4. **Buat repository baru di akun GitHub Anda**, lalu jalankan perintah berikut untuk menghubungkan dan mengirimkan kode (ganti `USERNAME` dan `REPO_NAME` dengan detail akun Anda):
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/USERNAME/REPO_NAME.git
-   git push -u origin main
-   ```
+Semua konfigurasi konten terletak di:
+👉 `src/data/laundryData.ts`
 
----
-
-## ☁️ 3. Cara Deploy ke Cloudflare Pages
-
-Karena proyek ini menggunakan fitur **Static HTML Export**, Anda dapat men-deploy-nya secara gratis tanpa server backend di Cloudflare Pages.
-
-### Langkah-langkah:
-1. Masuk ke **[Cloudflare Dashboard](https://dash.cloudflare.com/)**.
-2. Masuk ke menu **Workers & Pages** -> Klik tombol **Create Application** -> Pilih tab **Pages** -> Klik **Connect to Git**.
-3. Pilih repository GitHub `REPO_NAME` yang baru saja Anda push.
-4. Pada bagian **Build settings**, konfigurasikan seperti berikut:
-   - **Framework Preset**: Pilih `Next.js (Static HTML Export)`
-   - **Build Command**: `npm run build`
-   - **Build Directory**: `out`
-5. Klik **Save and Deploy**.
-6. Cloudflare akan menyelesaikan proses build dalam waktu kurang dari 1 menit dan memberikan Anda URL web resmi gratis (misalnya `bintang-laundry.pages.dev`). Setiap kali Anda melakukan push ke branch `main`, Cloudflare akan otomatis mengupdate websitenya secara real-time!
-
----
-
-## ✏️ 4. Cara Mengubah Harga dan Mengaktifkan Paket (Data Terpusat)
-
-Anda tidak perlu membongkar struktur komponen UI React jika ingin memperbarui harga layanan atau mengaktifkan paket hemat baru. Cukup buka dan edit berkas:
-👉 **`src/data/laundryData.ts`**
-
-### A. Mengubah Daftar Harga Kiloan
-Cukup ubah nilai angka pada array `priceList`. Format rupiah akan dihitung otomatis oleh sistem:
+### 1. Kustomisasi Harga Kiloan
+Ubah data pada array `priceList`. Format rupiah dan tata letak grid akan diperbarui secara otomatis.
 ```typescript
 export const priceList: PriceItem[] = [
   {
     id: 1,
     name: "Cuci Setrika",
-    price: 7000, // <--- Ubah angka ini (Contoh: naik dari 6.500 ke 7.000)
+    price: 6500, // Ubah nilai angka di sini
     unit: "kg",
     description: "Layanan cuci basah, pengeringan, hingga setrika rapi dan wangi. Siap pakai!",
+    isStartingPrice: false, // Set true jika ingin menampilkan label "Mulai Dari"
   },
   ...
 ];
 ```
 
-### B. Mengaktifkan Paket Hemat Baru (Mengganti Placeholder)
-Secara default, paket memiliki status `isAvailable: false` yang akan memunculkan card placeholder premium berlabel *"Segera Hadir"*.
-
-Apabila Anda sudah siap merilis paket laundry (misalnya: *Cuci Setrika 30 Kg* seharga *Rp190.000*), Anda cukup mengedit data paketnya dan mengganti `isAvailable` menjadi `true`:
+### 2. Kustomisasi Paket Bulanan
+Setiap paket menyertakan harga diskon (`price`) dan harga normal (`normalPrice`). Aplikasi akan secara otomatis menghitung selisih harga dan memunculkan badge hijau "Hemat Rp [Selisih]".
 ```typescript
 export const packages: PackageItem[] = [
   {
     id: 1,
-    name: "Cuci Setrika 30 Kg",  // <--- Masukkan Nama Paket Baru
-    price: 190000,               // <--- Tambahkan harga baru (dalam angka)
-    unit: "paket",               // <--- Tambahkan satuan unit
-    description: "Layanan cuci setrika hemat untuk kebutuhan bulanan keluarga Anda.",
-    isAvailable: true,           // <--- UBAH INI MENJADI true UNTUK MENGAKTIFKAN CARD HARGA!
+    name: "Paket Setrika 50 Kg",
+    price: 210000,       // Harga setelah diskon paket
+    normalPrice: 225000, // Harga normal tanpa paket (akan dicoret)
+    unit: "50 kg",
+    description: "Layanan hemat setrika kiloan bulanan khusus untuk pakaian bersih Anda.",
+    isAvailable: true,   // Set false jika ingin menyembunyikan paket sementara (Coming Soon)
   },
   ...
 ];
 ```
-Saat Anda mengubah `isAvailable: true`, tampilan card di website akan otomatis berubah secara dinamis dari placeholder abu-abu menjadi card harga merah premium lengkap dengan tombol CTA pemesanan WhatsApp!
 
-### C. Mengubah Kontak dan Alamat
-Anda dapat mengubah nomor telepon, alamat, URL Maps, dan pesan default WhatsApp di bagian object `contactInfo`:
-```typescript
-export const contactInfo: ContactInfo = {
-  phone: "08119333479",
-  formattedPhone: "628119333479", // <--- Format WA tanpa '+' atau spasi
-  whatsappMessage: "Halo Bintang Laundry, saya ingin memesan...", // <--- Pesan pembuka otomatis
-  ...
-};
-```
-
-### D. Mengaktifkan Harga Satuan Baru
-Sama halnya dengan paket, secara default semua item satuan memiliki status `isAvailable: false` yang akan memunculkan tombol *"Tanya Harga"* (otomatis membuka pesan tanya harga WhatsApp).
-
-Jika Anda ingin merilis harga resmi untuk suatu item (contoh: *Bed Cover* seharga *Rp35.000*), Anda cukup mengedit `unitPriceList` dan mengubah `isAvailable` menjadi `true` serta menambahkan properti `price`:
+### 3. Kustomisasi Layanan Satuan
+Sangat berguna untuk item seperti sajadah, bedcover, jas, atau karpet yang dihitung per meter persegi (`m²`) atau per unit (`pcs`).
 ```typescript
 export const unitPriceList: UnitPriceItem[] = [
   {
     id: 1,
-    name: "Bed Cover",
-    price: 35000,       // <--- Tambahkan harga baru
-    category: "Perlengkapan Kamar",
-    isAvailable: true,  // <--- Ubah menjadi true untuk memunculkan harga & tombol Pesan
+    name: "Karpet Tebal",
+    price: 20000,
+    unit: "m²", // Sistem akan otomatis menampilkan "Rp 20.000/m²"
+    category: "Karpet",
+    isAvailable: true, // Jika set false, akan memunculkan tombol hijau "Tanya Harga via WA"
   },
   ...
 ];
 ```
+
+---
+
+## ☁️ Panduan Deployment ke Cloudflare Pages
+
+Template ini 100% kompatibel dengan Cloudflare Pages gratis selamanya karena menggunakan Static HTML Export.
+
+1. Masuk ke **[Cloudflare Dashboard](https://dash.cloudflare.com/)** Anda.
+2. Navigasikan ke **Workers & Pages** > **Create Application** > **Pages** > **Connect to Git**.
+3. Pilih repositori GitHub Anda.
+4. Di bagian **Build Settings**, konfigurasikan sebagai berikut:
+   - **Framework Preset**: `Next.js (Static HTML Export)`
+   - **Build Command**: `npm run build`
+   - **Build Directory**: `out`
+5. Klik **Save and Deploy**. Cloudflare akan men-build otomatis setiap kali Anda melakukan `git push` ke branch `main`.
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi, laporan bug, masukan, dan saran penambahan fitur baru selalu kami sambut dengan senang hati!
+
+1. Fork Repositori ini.
+2. Buat branch fitur baru (`git checkout -b fitur/FiturKerenAnda`).
+3. Commit perubahan Anda (`git commit -m 'feat: menambahkan Fitur Keren Anda'`).
+4. Push ke branch tersebut (`git push origin fitur/FiturKerenAnda`).
+5. Buat Pull Request baru di repositori utama.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah Lisensi MIT - Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
+
+---
+
+*Dikembangkan dengan penuh dedikasi untuk industri laundry digital.*
