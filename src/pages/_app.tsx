@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${plusJakartaSans.variable} font-sans min-h-screen antialiased bg-white`}>
+    <main className={`${plusJakartaSans.variable} font-sans min-h-screen antialiased bg-bg text-text`}>
       <Component {...pageProps} />
     </main>
   );

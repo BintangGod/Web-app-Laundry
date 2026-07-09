@@ -47,7 +47,7 @@ export const priceList: PriceItem[] = [
   {
     id: 1,
     name: "Cuci Setrika",
-    price: 6500,
+    price: 7500,
     unit: "kg",
     description: "Layanan cuci basah, pengeringan, hingga setrika rapi dan wangi. Siap pakai!",
     isStartingPrice: false,
@@ -55,7 +55,7 @@ export const priceList: PriceItem[] = [
   {
     id: 2,
     name: "Setrika",
-    price: 4500,
+    price: 5500,
     unit: "kg",
     description: "Jasa menyetrika pakaian kusut Anda menjadi super licin, rapi, dan wangi.",
     isStartingPrice: false,
@@ -63,7 +63,7 @@ export const priceList: PriceItem[] = [
   {
     id: 3,
     name: "Cuci Lipat",
-    price: 5000,
+    price: 6000,
     unit: "kg",
     description: "Cuci bersih dan kering sempurna, dilipat rapi tanpa disetrika. Hemat & praktis.",
     isStartingPrice: false,
@@ -71,10 +71,10 @@ export const priceList: PriceItem[] = [
   {
     id: 4,
     name: "Cuci Setrika Express",
-    price: 10000,
+    price: 11000,
     unit: "kg",
-    description: "Kirim pagi sore jadi, kirim sore esok pagi jadi. Waktu pengerjaan dan harga fleksibel mengikuti permintaan customer.",
-    isStartingPrice: true,
+    description: "Cuci setrika express lebih cepat dibanding cuci biasa.",
+    isStartingPrice: false,
   },
 ];
 
@@ -82,37 +82,28 @@ export const packages: PackageItem[] = [
   {
     id: 1,
     name: "Paket Setrika 50 Kg",
-    price: 210000,
-    normalPrice: 225000,
+    price: 250000,
+    normalPrice: 275000, // 5500 x 50
     unit: "50 kg",
-    description: "Layanan hemat setrika kiloan bulanan khusus untuk pakaian bersih Anda.",
+    description: "Layanan hemat setrika kiloan. Berlaku hingga jatah kiloan habis.",
     isAvailable: true,
   },
   {
     id: 2,
     name: "Paket Setrika 80 Kg",
-    price: 330000,
-    normalPrice: 360000,
+    price: 400000,
+    normalPrice: 440000, // 5500 x 80
     unit: "80 kg",
-    description: "Layanan setrika kiloan kapasitas besar, ideal untuk keluarga aktif.",
+    description: "Layanan setrika kiloan kapasitas besar, ideal untuk keluarga aktif. Berlaku hingga jatah kiloan habis.",
     isAvailable: true,
   },
   {
     id: 3,
-    name: "Paket Cuci Setrika 50 Kg",
-    price: 310000,
-    normalPrice: 325000,
-    unit: "50 kg",
-    description: "Layanan lengkap cuci basah, pengeringan, dan setrika bulanan super hemat.",
-    isAvailable: true,
-  },
-  {
-    id: 4,
     name: "Paket Cuci Setrika 80 Kg",
-    price: 500000,
-    normalPrice: 520000,
+    price: 560000,
+    normalPrice: 600000, // 7500 x 80
     unit: "80 kg",
-    description: "Solusi total bulanan untuk pakaian keluarga bersih, rapi, harum, dan siap pakai.",
+    description: "Solusi total untuk pakaian keluarga bersih, rapi, harum, dan siap pakai. Berlaku hingga jatah kiloan habis.",
     isAvailable: true,
   },
 ];
@@ -242,7 +233,7 @@ export const contactInfo: ContactInfo = {
   whatsappMessage: process.env.NEXT_PUBLIC_WA_MESSAGE || "Halo Bintang Laundry, saya ingin memesan layanan laundry. Apakah bisa antar jemput?",
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME || "@laundry_username",
   instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/laundry_username",
-  operationalHours: "08.00 - 17.00 WIB (Fleksibel)",
+  operationalHours: "08.00 - 16.00 WIB (Fleksibel)",
   address: {
     line1: process.env.NEXT_PUBLIC_ADDRESS_LINE1 || "Cluster [Nama Cluster] Blok [No]",
     line2: process.env.NEXT_PUBLIC_ADDRESS_LINE2 || "Cimuning, Mustika Jaya",

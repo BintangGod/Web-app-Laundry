@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #e11d48;
-  --color-primary-hover: #be123c;
-  --color-primary-light: #fff1f2;
-  
+  /* Primary Accent: Warm Gold / Amber */
+  --color-primary: #F59E0B;
+  --color-primary-hover: #D97706;
+  --color-primary-light: rgba(245, 158, 11, 0.1);
+  --color-primary-glow: rgba(245, 158, 11, 0.15);
+
+  /* WhatsApp (unchanged) */
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #20ba56;
-  
+
+  /* Dark Theme Backgrounds */
+  --color-bg: #0A0E1A;
+  --color-bg-card: #141B2D;
+  --color-bg-section: #0F1629;
+  --color-bg-elevated: #1A2340;
+
+  /* Text Colors */
+  --color-text: #F5F5F4;
+  --color-text-muted: #A8A29E;
+  --color-text-dim: #78716C;
+
+  /* Font */
   --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -16,20 +31,85 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #0f172a; /* Slate 900 */
+  background-color: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
-/* Custom styles for subtle premium glassmorphism & soft shadows */
+/* Premium dark card shadows with amber glow */
 .premium-shadow {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .premium-card-shadow {
-  box-shadow: 0 10px 40px -10px rgba(225, 29, 72, 0.06), 0 4px 20px -2px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 .premium-card-shadow-hover {
-  box-shadow: 0 20px 50px -12px rgba(225, 29, 72, 0.12), 0 8px 30px -4px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 20px 50px -12px rgba(245, 158, 11, 0.15),
+    0 8px 30px -4px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(245, 158, 11, 0.1);
+}
+
+/* Amber glow effect for special elements */
+.amber-glow {
+  box-shadow:
+    0 0 20px rgba(245, 158, 11, 0.1),
+    0 0 60px rgba(245, 158, 11, 0.05);
+}
+
+/* Intro animation styles */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  pointer-events: none;
+}
+
+/* Cursor glow - hidden on touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+    background: radial-gradient(
+      circle,
+      rgba(245, 158, 11, 0.08) 0%,
+      rgba(245, 158, 11, 0.03) 30%,
+      transparent 70%
+    );
+    mix-blend-mode: screen;
+    will-change: transform;
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: #FFFFFF;
+}
+
+/* Scrollbar dark styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5);
 }

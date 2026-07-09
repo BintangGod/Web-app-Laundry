@@ -1,4 +1,5 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PriceList from "@/components/PriceList";
@@ -6,6 +7,14 @@ import UnitPriceSection from "@/components/UnitPriceSection";
 import PackageSection from "@/components/PackageSection";
 import LocationSection from "@/components/LocationSection";
 import Footer from "@/components/Footer";
+
+// Dynamic imports for client-only animation components
+const IntroAnimation = dynamic(() => import("@/components/IntroAnimation"), {
+  ssr: false,
+});
+const CursorGlow = dynamic(() => import("@/components/CursorGlow"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -18,7 +27,7 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {/* SEO OpenGraph Tags (Premium standard) */}
+        {/* SEO OpenGraph Tags */}
         <meta property="og:title" content="Bintang Laundry | Laundry Kiloan Bekasi" />
         <meta
           property="og:description"
@@ -26,9 +35,17 @@ export default function Home() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="id_ID" />
+        {/* Theme Color for dark theme */}
+        <meta name="theme-color" content="#0A0E1A" />
       </Head>
 
-      <div className="relative min-h-screen flex flex-col bg-white">
+      {/* Intro Animation Overlay */}
+      <IntroAnimation />
+
+      {/* Cursor Glow Effect (desktop only) */}
+      <CursorGlow />
+
+      <div className="relative min-h-screen flex flex-col">
         {/* Header Navigation */}
         <Navbar />
 
@@ -43,7 +60,7 @@ export default function Home() {
           {/* Harga Satuan Section */}
           <UnitPriceSection />
 
-          {/* Future Package Section */}
+          {/* Package Section */}
           <PackageSection />
 
           {/* Location & Map Section */}
